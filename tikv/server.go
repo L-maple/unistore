@@ -375,11 +375,11 @@ func (svr *Server) KvImport(context.Context, *kvrpcpb.ImportRequest) (*kvrpcpb.I
 	// TODO
 	return &kvrpcpb.ImportResponse{}, nil
 }
-
-func (svr *Server) RawCompareAndSwap(context.Context, *kvrpcpb.RawCASRequest) (*kvrpcpb.RawCASResponse, error) {
-	// TODO
-	return &kvrpcpb.RawCASResponse{}, nil
-}
+//
+//func (svr *Server) RawCompareAndSwap(context.Context, *kvrpcpb.RawCASRequest) (*kvrpcpb.RawCASResponse, error) {
+//	// TODO
+//	return &kvrpcpb.RawCASResponse{}, nil
+//}
 
 func (svr *Server) KvCleanup(ctx context.Context, req *kvrpcpb.CleanupRequest) (*kvrpcpb.CleanupResponse, error) {
 	reqCtx, err := newRequestCtx(svr, req.Context, "KvCleanup")
@@ -638,9 +638,9 @@ func (svr *Server) DispatchMPPTask(_ context.Context, _ *mpp.DispatchTaskRequest
 	panic("todo")
 }
 
-func (svr *Server) IsAlive(_ context.Context, _ *mpp.IsAliveRequest) (*mpp.IsAliveResponse, error) {
-	panic("todo")
-}
+//func (svr *Server) IsAlive(_ context.Context, _ *mpp.IsAliveRequest) (*mpp.IsAliveResponse, error) {
+//	panic("todo")
+//}
 
 func (svr *Server) executeMPPDispatch(ctx context.Context, req *mpp.DispatchTaskRequest, storeAddr string, storeId uint64, handler *cophandler.MPPTaskHandler) error {
 	var reqCtx *requestCtx
